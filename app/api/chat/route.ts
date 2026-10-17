@@ -32,8 +32,8 @@ Gunakan panduan informasi berikut tentang Gilby untuk menjawab pertanyaan:
    - WhatsApp/Telepon: +62 823-3464-1491 (wa.me/6282334641491)
    - GitHub: github.com/raihanmlg98-coder
    - Instagram: @skibidi_zz_ (instagram.com/skibidi_zz_)
-   - TikTok: @clarkekentt0 (tiktok.com/@clarkekentt0)
-   - Figma Project: https://www.figma.com/proto/K0Uh8AJGxRBt6wjROuyFEG/PJBL?node-id=225-5&starting-point-node-id=216%3A4521
+   - Figma Project (App): https://www.figma.com/proto/K0Uh8AJGxRBt6wjROuyFEG/PJBL?node-id=225-5&starting-point-node-id=216%3A4521
+   - Figma Project (Web): https://www.figma.com/proto/Ke2lASSrynldGOjp0NPbP8/PJBL-WEB?node-id=4-727&p=f&t=h5zwr7VUPVmskl4c-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A727
    - Pendekatan: Mengutamakan solusi yang efisien, mudah dikelola, dan skalabel melalui praktik terbaik pengembangan perangkat lunak (best software development practices).
 
 2. **Tech Stack & Keahlian**:
@@ -199,7 +199,7 @@ export async function POST(req: NextRequest) {
       let fallbackReply = `Halo! Terima kasih telah berkunjung ke portofolio **Gilby Maleeq Gibrany**.\n\n`
 
       if (query.includes("projek") || query.includes("project") || query.includes("karya") || query.includes("figma")) {
-        fallbackReply += `Gilby berfokus pada **UI/UX Design & Web Development**. Salah satu karya utamanya adalah perancangan aplikasi dan website F&B di Figma: [Lihat Prototipe Figma](https://www.figma.com/proto/K0Uh8AJGxRBt6wjROuyFEG/PJBL?node-id=225-5&starting-point-node-id=216%3A4521).`
+        fallbackReply += `Gilby berfokus pada **UI/UX Design & Web Development**. Karya utamanya meliputi:\n- **F&B Mobile App:** [Lihat Prototipe Figma App](https://www.figma.com/proto/K0Uh8AJGxRBt6wjROuyFEG/PJBL?node-id=225-5&starting-point-node-id=216%3A4521)\n- **KedaiKu Web Platform:** [Lihat Prototipe Figma Web](https://www.figma.com/proto/Ke2lASSrynldGOjp0NPbP8/PJBL-WEB?node-id=4-727&p=f&t=h5zwr7VUPVmskl4c-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A727).`
       } else if (query.includes("skill") || query.includes("keahlian") || query.includes("bahasa") || query.includes("stack")) {
         fallbackReply += `Tech stack Gilby meliputi:\n- **Frontend:** HTML5, CSS3, Python\n- **Backend:** Node.js, JavaScript\n- **Database:** Supabase\n- **Tools:** GitHub, Git, VS Code, Figma, Canva, CapCut.`
       } else if (query.includes("kontak") || query.includes("hubungi") || query.includes("wa") || query.includes("telepon") || query.includes("email")) {

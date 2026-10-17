@@ -287,7 +287,7 @@ const projectList = [
     features: ["Online Ordering & Booking", "Menu & Discount Management", "Cart & Checkout System", "Responsive Web Layout"],
     tech: ["Figma", "HTML5", "CSS3", "JavaScript"],
     githubUrl: "https://github.com/raihanmlg98-coder",
-    liveDemoUrl: "https://www.figma.com/proto/K0Uh8AJGxRBt6wjROuyFEG/PJBL?node-id=225-5&starting-point-node-id=216%3A4521",
+    liveDemoUrl: "https://www.figma.com/proto/Ke2lASSrynldGOjp0NPbP8/PJBL-WEB?node-id=4-727&p=f&t=h5zwr7VUPVmskl4c-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A727",
     isPrivateRepo: false,
   },
   {
