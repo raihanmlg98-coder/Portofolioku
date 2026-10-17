@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <linearGradient id="a" x1="72.8" y1="12.3" x2="27.6" y2="57.5" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#387eb8"/>
+    <stop offset="1" stop-color="#366994"/>
+  </linearGradient>
+  <linearGradient id="b" x1="55.2" y1="115.7" x2="100.4" y2="70.5" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#ffe052"/>
+    <stop offset="1" stop-color="#ffc331"/>
+  </linearGradient>
+  <path fill="url(#a)" d="M63.7 3.3c-13.6 0-25.5 2.1-25.5 12.3v9.3h25.8v3.7H25.7C11.9 28.6 0 35.8 0 54.3c0 18.2 10.3 25.1 23.8 25.1h7.8V68.2c0-8.6 7.6-15.7 16.3-15.7h25.7c7.2 0 13-5.9 13-13.1V15.6c0-10.2-11.9-12.3-23-12.3h.1zm-13.9 7.7c2.6 0 4.8 2.2 4.8 4.8s-2.2 4.8-4.8 4.8-4.8-2.2-4.8-4.8 2.2-4.8 4.8-4.8z"/>
+  <path fill="url(#b)" d="M64.3 124.7c13.6 0 25.5-2.1 25.5-12.3v-9.3H64v-3.7h38.3c13.8 0 25.7-7.2 25.7-25.7 0-18.2-10.3-25.1-23.8-25.1h-7.8v11.2c0 8.6-7.6 15.7-16.3 15.7H54.4c-7.2 0-13 5.9-13 13.1v23.8c0 10.2 11.9 12.3 23 12.3h-.1zm13.9-7.7c-2.6 0-4.8-2.2-4.8-4.8s2.2-4.8 4.8-4.8 4.8 2.2 4.8 4.8-2.2 4.8-4.8 4.8z"/>
+</svg>
