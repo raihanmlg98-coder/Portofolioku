@@ -190,8 +190,14 @@ export async function POST(req: NextRequest) {
     })
 
     // 5. Cek konfigurasi environment
-    const apiKey = process.env.ROUTER_APIKEY
-    const baseURL = process.env.ROUTER_BASE_URL
+    const geminiKey = process.env.GEMINI_API_KEY
+    const apiKey = geminiKey || process.env.ROUTER_APIKEY
+    const baseURL = geminiKey
+      ? (process.env.GEMINI_BASE_URL || "https://generativelanguage.googleapis.com/v1beta/openai/")
+      : process.env.ROUTER_BASE_URL
+    const model = geminiKey
+      ? (process.env.GEMINI_MODEL || "gemini-3.8-flash")
+      : "ryhar-gemini"
 
     if (!apiKey || !baseURL) {
       // Smart offline fallback response
@@ -246,8 +252,9 @@ export async function POST(req: NextRequest) {
     // 6. Susun pesan dengan authoritative server-side system prompt & riwayat dari SQLite
     const messages: OpenAI.ChatCompletionMessageParam[] = [{ role: "system", content: SYSTEM_PROMPT }, ...historyFromDb, { role: "user", content: trimmedText }]
 
+
     const completion = await openai.chat.completions.create({
-      model: "ryhar-gemini",
+      model,
       messages,
       temperature: 0.7,
       top_p: 0.7,
@@ -298,8 +305,13 @@ export async function POST(req: NextRequest) {
     return new Response(readable, {
       headers: responseHeaders,
     })
-  } catch (error) {
-    console.error("Chat API Error:", error)
-    return NextResponse.json({ success: false, message: "Gagal terhubung ke server AI." }, { status: 500 })
+  } catch (error: any) {
+    console.error("Chat API Error Details:", {
+      message: error?.message,
+      status: error?.status,
+      error: error?.error,
+      cause: error?.cause,
+    })
+    return NextResponse.json({ success: false, message: error?.message || "Gagal terhubung ke server AI." }, { status: 500 })
   }
 }
